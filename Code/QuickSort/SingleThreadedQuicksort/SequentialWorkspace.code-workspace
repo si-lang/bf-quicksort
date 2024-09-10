@@ -1,0 +1,58 @@
+{
+	"folders": [
+		{
+			"path": "v9"
+		},
+		{
+			"path": "/home/si/Schreibtisch/Master-Thesis-Simon-Lang/Code/Profiling/ProfilingForV9"
+		},
+		{
+			"path": "/home/si/Schreibtisch/Master-Thesis-Simon-Lang/Code/Tests/TestsForV9"
+		},
+		{
+			"path": "/home/si/Schreibtisch/Master-Thesis-Simon-Lang/Code"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cctype": "cpp",
+			"clocale": "cpp",
+			"cmath": "cpp",
+			"csignal": "cpp",
+			"cstdarg": "cpp",
+			"cstddef": "cpp",
+			"cstdio": "cpp",
+			"cstdlib": "cpp",
+			"cstring": "cpp",
+			"ctime": "cpp",
+			"cwchar": "cpp",
+			"cwctype": "cpp",
+			"array": "cpp",
+			"atomic": "cpp",
+			"*.tcc": "cpp",
+			"chrono": "cpp",
+			"codecvt": "cpp",
+			"condition_variable": "cpp",
+			"cstdint": "cpp",
+			"exception": "cpp",
+			"slist": "cpp",
+			"functional": "cpp",
+			"future": "cpp",
+			"initializer_list": "cpp",
+			"iosfwd": "cpp",
+			"limits": "cpp",
+			"memory": "cpp",
+			"mutex": "cpp",
+			"new": "cpp",
+			"ratio": "cpp",
+			"stdexcept": "cpp",
+			"system_error": "cpp",
+			"thread": "cpp",
+			"tuple": "cpp",
+			"type_traits": "cpp",
+			"typeinfo": "cpp",
+			"utility": "cpp",
+			"*.ipp": "cpp"
+		}
+	}
+}

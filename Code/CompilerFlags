@@ -1,0 +1,59 @@
+Sequential:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native PartitionAndSwapTest.cpp -o partitionAndSwapTest
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native QuickSortTest.cpp -o quickSortTest
+
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native PartitionProfile.cpp -o partitionProfile -L../TimeAndProfile -ljevents -ltbb
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native QuickSortProfile.cpp -o quickSortProfile -ltbb
+
+
+Experiments:
+Block Size:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native blockSizes.cpp -o blockSizes -L../../TimeAndProfile -ljevents -ltbb
+
+Partition Comparison Small:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native partitionComparisonSmall.cpp -o partitionComparisonSmall -L../../TimeAndProfile -ljevents -ltbb
+
+Partition Comparison:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native partitionComparison.cpp -o partitionComparison -L../../TimeAndProfile -ljevents -ltbb
+
+Pivot Selection:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native pivotSelection.cpp -o pivotSelection -L../../TimeAndProfile -ljevents -ltbb
+
+Pivot Selection Small:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native pivotSelectionSmall.cpp -o pivotSelectionSmall -L../../TimeAndProfile -ljevents -ltbb
+
+Pivot Selection T:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native pivotSelectionT.cpp -o pivotSelectionT -L../../TimeAndProfile -ljevents -ltbb
+
+Quicksort Comparison:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native quicksortComparison.cpp -o quicksortComparison -L../../TimeAndProfile -ljevents -ltbb
+
+
+
+Parallel (GNU Parallel Mode: -D_GLIBCXX_PARALLEL -fopenmp):
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelPartitionAndSwapTest.cpp -o parallelPartitionAndSwapTest
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelQuickSortTest.cpp -o parallelQuickSortTest
+
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelPartitionProfile.cpp -o parallelPartitionProfile -L../TimeAndProfile -ljevents -ltbb
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native -fopenmp ParallelPartitionProfile.cpp -o parallelPartitionProfile -L../TimeAndProfile -ljevents -ltbb -D_GLIBCXX_PARALLEL
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelQuickSortProfile.cpp -o parallelQuickSortProfile -L../TimeAndProfile -ljevents -ltbb
+g++-6 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native -D_GLIBCXX_PARALLEL -fopenmp ParallelQuickSortProfile.cpp -o parallelQuickSortProfile -L../TimeAndProfile -ljevents -ltbb
+
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native simpleExec.cpp -o simpleExec -L../TimeAndProfile -ljevents -ltbb
+
+
+Experiments:
+Chunk Size:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native chunkSize.cpp -o chunkSize -L../../TimeAndProfile -ljevents -ltbb
+
+Parallel Partition Scaling:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native parScale.cpp -o parScale -L../../TimeAndProfile -ljevents -ltbb
+
+Parallel Partition Comparison:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native -D_GLIBCXX_PARALLEL -fopenmp parComparison.cpp -o parComparison -L../../TimeAndProfile -ljevents -ltbb
+
+Parallel Quicksort Scaling:
+g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native quickScale.cpp -o quickScale -L../../TimeAndProfile -ljevents -ltbb
+
+Parallel Quicksort Comparison:
+g++-6 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native -D_GLIBCXX_PARALLEL -fopenmp quickComparison.cpp -o quickComparison -L../../TimeAndProfile -ljevents -ltbb

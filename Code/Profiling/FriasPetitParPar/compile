@@ -1,0 +1,4 @@
+export MCSTL=../../mcstl;
+g++-4.2 -DMCSTL_NO_FILL -I$MCSTL/c++ -g0 -I$MCSTL/originals/_usr_local_include_c++_4.2.0 -I. -O3 -DNDEBUG -fopenmp  -I/usr/local/include test.cc -o test.x
+export MCSTL=../../mcstl; 
+g++-4.2 -DMCSTL_NO_FILL -I$MCSTL/c++ -I$MCSTL/originals/_usr_local_include_c++_4.2.0 -I. -O3 -DNDEBUG -D__COUNTERS__ -fopenmp  -I/usr/local/include test.cc -o test_count.x

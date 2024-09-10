@@ -1,0 +1,67 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build: Parallel Partition Profile",
+			"type": "shell",
+			"command": "g++ -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelPartitionProfile.cpp -o parallelPartitionProfile -L../TimeAndProfile -ljevents",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Build: Parallel Quick Sort Profile",
+			"type": "shell",
+			"command": "g++ -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelQuickSortProfile.cpp -o parallelQuickSortProfile -ltbb",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Build and Run: Parallel Partition Profile",
+			"type": "shell",
+			"command": "g++ -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelPartitionProfile.cpp -o parallelPartitionProfile -L../TimeAndProfile -ljevents && ./parallelPartitionProfile",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Build and Run: Parallel Quick Sort Profile",
+			"type": "shell",
+			"command": "g++ -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O3 -march=native ParallelQuickSortProfile.cpp -o parallelQuickSortProfile -ltbb && ./parallelQuickSortProfile",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Build: Chunk Size",
+			"type": "shell",
+			"command": "g++-7 -std=c++14 -pthread -lm -lc -lgcc_s -lgcc -O0 -g3 -march=native ./Experiments/chunkSize.cpp -o ./Experiments/chunkSize -L../TimeAndProfile -ljevents -ltbb",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+	]
+}

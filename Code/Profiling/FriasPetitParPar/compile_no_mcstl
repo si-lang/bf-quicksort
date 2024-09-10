@@ -1,0 +1,2 @@
+g++-4.2 -g0 -DNDEBUG -fopenmp -O3 test.cc -o test.x
+g++-4.2 -D__COUNTERS__ -g0 -DNDEBUG -fopenmp -O3 test.cc -o test_counters.x
